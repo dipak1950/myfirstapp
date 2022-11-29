@@ -71,7 +71,7 @@ function App() {
             </tr>
 
             {
-                data.map((v) =>
+                data.map((v) => {
                     <tr>
                         <td>
                             {v.id}
@@ -92,7 +92,7 @@ function App() {
                             {v.status.toString()}
                         </td>
                     </tr>
-                )
+                })
             }
 
         </table>
