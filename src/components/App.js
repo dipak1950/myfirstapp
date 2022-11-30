@@ -47,55 +47,39 @@ function App() {
         ];
 
     return (
-
-        <table border="1" width="1200" align="center" cellspacing="0" cellpadding="5">
-            <tr>
-                <td>
-                    id
-                </td>
-                <td>
-                    name
-                </td>
-                <td>
-                    quantity
-                </td>
-                <td>
-                    price
-                </td>
-                <td>
-                    expiry
-                </td>
-                <td>
-                    status
-                </td>
-            </tr>
-
+        <div className='cards'>
             {
                 data.map((v) => {
-                    <tr>
-                        <td>
-                            {v.id}
-                        </td>
-                        <td>
-                            {v.name}
-                        </td>
-                        <td>
-                            {v.quantity}
-                        </td>
-                        <td>
-                            {v.price}
-                        </td>
-                        <td>
-                            {v.expiry}
-                        </td>
-                        <td>
-                            {v.status.toString()}
-                        </td>
-                    </tr>
+                    return (
+                        <div className='card-item'>
+                            <h4>
+                               Name : {v.name}
+                            </h4>
+                            <br></br>
+                            <h4>
+                                ID : {v.id}
+                            </h4>
+                            <br></br>
+                            <h4>
+                                Quantity : {v.quantity}
+                            </h4>
+                            <br></br>
+                            <h4>
+                                Price : {v.price}
+                            </h4>
+                            <br></br>
+                            <h4>
+                                Expiry : {v.expiry}
+                            </h4>
+                            <br></br>
+                            <h3>
+                                Status :{v.status.toString()}
+                            </h3>
+                        </div>
+                    )
                 })
             }
-
-        </table>
+        </div>
     )
 
 }

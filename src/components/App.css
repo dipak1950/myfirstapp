@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,9 +35,27 @@
   to {
     transform: rotate(360deg);
   }
+} */
+*{
+  margin: 0;
+  box-sizing: border-box;
 }
 table{
   color: black;
   margin-top: 80px;
 }
-
+.cards{
+  width: 1140px;
+  background-color: chartreuse;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.card-item{
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 10px;
+  margin: 0 auto; 
+}
