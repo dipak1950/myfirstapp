@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.counter{
+    margin: 0 auto;
+    font-size: 50px;
+    text-align: center;
+    width: 600px;
+    background-color: blue;
+}
+button{
+    width: 50px;
+    padding: 5px;
+    border: none;
+    background-color: brown;
+}
+.b{
+    background-color: cadetblue;
+    margin-left: 20px;
+}
