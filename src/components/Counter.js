@@ -18,10 +18,16 @@ class Counter extends React.Component {
     }
 
     decreament() {
-        this.setState(() => {
-            return {
+        if (this.state.count > 0) {
+            this.setState({
                 count: this.state.count - 1
-            }
+            })
+        }
+    }
+
+    delete() {
+        this.setState({
+            count: 0
         })
     }
 
@@ -39,13 +45,21 @@ class Counter extends React.Component {
                     onClick={() => {
                         this.increament()
                     }}>
-                    +
+                    <i class="fa-solid fa-plus"></i>
                 </button>
+
                 <button
                     onClick={() => {
                         this.decreament()
-                    }} className="b">
-                    -
+                    }}>
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <button
+                    onClick={() => {
+                        this.delete()
+                    }}>
+                    <i class="fa-solid fa-trash-can"></i>
                 </button>
 
             </div>
