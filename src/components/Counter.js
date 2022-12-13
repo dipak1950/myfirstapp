@@ -1,37 +1,13 @@
 import React from "react";
 import './Counter.css';
+import UpdateCom from "./HOC";
 
 class Counter extends React.Component {
-    constructor() {
-        super();
 
-        this.state = {
-            count: 0
-        }
-    }
-    increament() {
-        this.setState(() => {
-            return {
-                count: this.state.count + 1
-            }
-        })
-    }
-
-    decreament() {
-        if (this.state.count > 0) {
-            this.setState({
-                count: this.state.count - 1
-            })
-        }
-    }
-
-    delete() {
-        this.setState({
-            count: 0
-        })
-    }
 
     render() {
+        const { count, increamentd, decreamentd, deleted} = this.props;
+
         return (
             <div className="counter">
 
@@ -39,32 +15,25 @@ class Counter extends React.Component {
 
                 <h3>Class Base Components</h3>
                 <p>
-                    {this.state.count}
+                    {count}
                 </p>
                 <button
-                    onClick={() => {
-                        this.increament()
-                    }}>
+                    onClick={increamentd}>
                     <i class="fa-solid fa-plus"></i>
                 </button>
 
                 <button
-                    onClick={() => {
-                        this.decreament()
-                    }}>
+                    onClick={decreamentd}>
                     <i class="fa-solid fa-minus"></i>
                 </button>
 
                 <button
-                    onClick={() => {
-                        this.delete()
-                    }}>
+                    onClick={deleted}>
                     <i class="fa-solid fa-trash-can"></i>
                 </button>
-
             </div>
         );
     }
 }
 
-export default Counter;
+export default UpdateCom(Counter);
