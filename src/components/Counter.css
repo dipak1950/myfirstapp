@@ -7,10 +7,12 @@
     font-size: 50px;
     text-align: center;
     width: 600px;
+    color: white;
     background-color: blue;
 }
 button{
-    width: 50px;
+    width: 70px;
+    margin: 10px;
     padding: 5px;
     border: none;
     background-color: brown;
