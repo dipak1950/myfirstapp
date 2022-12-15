@@ -6,6 +6,9 @@ import './index.css';
 import Counter from './components/Counter';
 import HoverCounter from './components/HoverCounter';
 import CounterFunHook from './components/CounterFun';
+import PageWidth from './components/PageWidth';
+import CounterFunUse from './components/CounterFunUse';
+import Tab from './components/TabApi';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -13,11 +16,14 @@ import CounterFunHook from './components/CounterFun';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const arr = ["home", "pages", "tour-list", "room-list", "tour-search", "blog"]
 root.render(
-<>
-  {/* <Counter /> */}
-  {/* <HoverCounter/> */}
-  <CounterFunHook/>
-</>
+  <>
+    {/* <Counter /> */}
+    {/* <HoverCounter/> */}
+    {/* <CounterFunHook/> */}
+    {/* <PageWidth /> */}
+    {/* <CounterFunUse /> */}
+    <Tab />
+  </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
 

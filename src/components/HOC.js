@@ -36,10 +36,11 @@ function UpdateCom(OrignalCom) {
 
         render() {
             return (
-                <OrignalCom count={this.state.count} increamentd={() => { this.increament()}} decreamentd={() => { this.decreament()}} deleted={() => { this.delete()}}/>
+                <OrignalCom count={this.state.count} increamentd={() => { this.increament() }} decreamentd={() => { this.decreament() }} deleted={() => { this.delete() }} />
             )
         }
     }
+
     return NewCom;
 }
 
