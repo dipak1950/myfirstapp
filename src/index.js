@@ -9,6 +9,7 @@ import CounterFunHook from './components/CounterFun';
 import PageWidth from './components/PageWidth';
 import CounterFunUse from './components/CounterFunUse';
 import Tab from './components/TabApi';
+import List from './components/List-and-Key';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -22,7 +23,8 @@ root.render(
     {/* <CounterFunHook/> */}
     {/* <PageWidth /> */}
     {/* <CounterFunUse /> */}
-    <Tab />
+    {/* <Tab /> */}
+    <List/>
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />

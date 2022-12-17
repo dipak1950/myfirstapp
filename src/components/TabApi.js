@@ -33,7 +33,7 @@ function Tab() {
                         {JSON.stringify(item.name)}
                         {JSON.stringify(item.userid)}
                         {JSON.stringify(item.email)}
-                        {JSON.stringify(item.address)}
+                        {JSON.stringify(item.address.city)}
                         {JSON.stringify(item.zipcode)}
                         {JSON.stringify(item.phone)}
                         {JSON.stringify(item.website)}

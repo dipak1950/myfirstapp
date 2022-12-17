@@ -11,10 +11,11 @@
     background-color: blue;
 }
 button{
-    width: 70px;
+    width: 90px;
     margin: 10px;
     padding: 5px;
     border: none;
+    color: white;
     background-color: brown;
 }
 .b{
