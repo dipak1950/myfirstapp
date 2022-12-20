@@ -13,7 +13,7 @@ function FormHandle() {
         // console.log(e.target.value);
         setName(e.target.value)
         setfullName(e.target.value)
-    }
+    } 
 
     const changeEmail = (e) => {
         setEmail(e.target.value)
