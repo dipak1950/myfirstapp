@@ -22,3 +22,21 @@ button{
     background-color: cadetblue;
     margin-left: 20px;
 }
+h1{
+    text-align: center;
+}
+.formhandle{
+    padding: 30px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+input{
+    padding: 3px;
+    }
+label{
+    font-size: 20px;
+    border: none;
+}
+form{
+    text-align: center;
+}

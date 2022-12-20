@@ -10,6 +10,9 @@ import PageWidth from './components/PageWidth';
 import CounterFunUse from './components/CounterFunUse';
 import Tab from './components/TabApi';
 import List from './components/List-and-Key';
+import FormHandle from './components/FormHandle';
+import Events from './components/Events';
+import FormManage from './components/FormManage';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -24,7 +27,10 @@ root.render(
     {/* <PageWidth /> */}
     {/* <CounterFunUse /> */}
     {/* <Tab /> */}
-    <List/>
+    {/* <List/> */}
+    {/* <FormHandle /> */}
+    {/* <Events /> */}
+    <FormManage />
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
