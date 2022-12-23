@@ -15,7 +15,7 @@ function RegisterForm() {
     const { values, handleSubmit, handleChange, handleBlur, errors, touched } = useFormik({
 
         initialValues: initialValue,
-        validationSchema: RegisterSchema,   
+        validationSchema: RegisterSchema,
         onSubmit: (values, action) => {
 
             const newData = values;
