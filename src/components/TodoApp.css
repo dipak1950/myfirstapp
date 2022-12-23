@@ -76,6 +76,9 @@ h1 {
     font-size: 28px;
     border-radius: 50%;
 }
+button{
+    margin: 5px;
+}
 
 .button-complete {
     color: #ff6c6c;

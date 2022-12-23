@@ -46,8 +46,10 @@ function Todolist() {
                 <input type="text" placeholder='Add a Items..' className='task-input' onChange={itemEvent} value={inputList} />
                 <button onClick={listOfItems} className='button-add' type='submit'>
                     Add
-                </button>
-                <button onClick={cleardata} className="button-add">Clear</button>
+                </button>{
+                    Items.length > 1 ?
+                        <button onClick={cleardata} className="button-add">Clear</button> : ''
+                }
 
                 <ol>
                     {
