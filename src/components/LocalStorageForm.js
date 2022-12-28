@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { RegisterSchema } from '../Schema/RegisterSchema'
 
@@ -9,9 +9,19 @@ const initialValue = ({
     c_password: ''
 });
 
-function RegisterForm() {
+const getdata = () => {
+    let data = window.localStorage.getItem("MyData");
+    console.log(data);
+    if (data === null || data == '') {
+        return [];
+    } else {
+        return JSON.parse(data);
+    }
+}
+function LocalStorageForm() {
 
-    const [SubmitData, setSubmitData] = useState([])
+    const [SubmitData, setSubmitData] = useState(getdata());
+    const [passwordShown, setPasswordShown] = useState(false);
     const { values, handleSubmit, handleChange, handleBlur, errors, touched } = useFormik({
 
         initialValues: initialValue,
@@ -26,9 +36,26 @@ function RegisterForm() {
         }
     });
 
+    useEffect(() => {
+        window.localStorage.setItem("MyData", JSON.stringify(SubmitData));
+        window.localStorage.setItem("Data", "ddddd");
+    }, [SubmitData]);
+
+    const togglePassword = () => {
+        setPasswordShown(!passwordShown);
+    };
+
+    const clearData = () => {
+        window.localStorage.clear();
+    }
+
+    const removeData = () => {
+        window.localStorage.removeItem("Data")
+    }
+
+
     return (
         <>
-            <h1>Register Form</h1>
             <br />
             <form onSubmit={handleSubmit}>
                 <label>
@@ -88,26 +115,46 @@ function RegisterForm() {
                 <br />
                 <br />
                 <button type="submit">Submit</button>
+                <button type="button" onClick={() => { clearData() }}>Clear</button>
+                <button type="button" onClick={() => { removeData() }}>remove</button>
             </form>
-            {
-                SubmitData.map((v, i) => {
-                    // console.log(v);
-                    return (
-                        <div className="" key={i} id={i}>
-                            <table width={1345} border={1} cellPadding={5} cellSpacing={10}>
-                                <tr>
-                                    <td>{i + 1}</td>
-                                    <td>{v.name}</td>
-                                    <td>{v.email}</td>
-                                    <td>{v.password}</td>
-                                </tr>
-                            </table>
-                        </div>
-                    )
-                })
-            }
+
+            <ol>
+                {
+                    SubmitData.map((v, i) => {
+                        // console.log(v);
+                        return (
+                            <li className="row">
+                                <span className="col-2">
+                                    {
+                                        i + 1
+                                    }
+                                </span>
+                                <span className="col-3">
+                                    {
+                                        v.name
+                                    }
+                                </span>
+                                <span className="col-4">
+                                    {
+                                        v.email
+                                    }
+                                </span>
+                                <span className="col-3">
+                                    {
+                                        <>
+                                            <input type={passwordShown ? "text" : "password"} disabled="disabled" value={v.password} style={{ border: 0, backgroundColor: "transparent" }} />
+                                            <button onClick={togglePassword}><i class="fa-regular fa-eye-slash"></i></button>
+                                        </>
+                                    }
+                                </span>
+                            </li>
+                        )
+                    })
+                }
+            </ol>
         </>
     )
 }
 
-export default RegisterForm;
+export default LocalStorageForm;

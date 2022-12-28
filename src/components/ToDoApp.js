@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ToDoHeader from "./ToDoHeader";
 import './TodoApp.css'
+
+
+const GetTodo = () => {
+    let data = window.localStorage.getItem("MyTodo")
+    return JSON.parse(data)
+}
 
 function Todolist() {
 
     const [inputList, setInputList] = useState("");
-    const [Items, setItems] = useState([]);
+    const [Items, setItems] = useState(GetTodo());
 
     const itemEvent = (e) => {
         setInputList(e.target.value)
@@ -25,7 +31,7 @@ function Todolist() {
     }
 
     const deleteItems = (id) => {
-        console.log("deleted");
+        // console.log("deleted");
         setItems((oldItems) => {
             return oldItems.filter((arrElem, index) => {
                 return index !== id;
@@ -36,6 +42,11 @@ function Todolist() {
     const cleardata = () => {
         setItems([]);
     }
+
+    useEffect(() => {
+        window.localStorage.setItem("MyTodo", JSON.stringify(Items));
+    }, [Items]);
+
 
     return (
         <div className="container">

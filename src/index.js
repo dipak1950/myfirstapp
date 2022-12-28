@@ -15,6 +15,7 @@ import './index.css';
 // import FormManage from './components/FormManage';
 import RegisterForm from './components/RegisterForm';
 import Todolist from './components/ToDoApp';
+import LocalStorageForm from './components/LocalStorageForm';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -34,7 +35,8 @@ root.render(
     {/* <FormHandle /> */}
     {/* <FormManage /> */}
     {/* <RegisterForm /> */}
-    <Todolist />
+    {/* <Todolist /> */}
+    <LocalStorageForm />
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
