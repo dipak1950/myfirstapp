@@ -22,6 +22,7 @@ import { Route, Routes } from 'react-router-dom';
 // import LocalStorageForm from './components/LocalStorageForm';
 // import Header from './components/Router-Pages/Home/HeaderR';
 import HeaderR from './components/Router-Pages/Home/HeaderR';
+import CRUAD from './components/CRUD/CRUD';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -45,12 +46,13 @@ root.render(
     {/* <LocalStorageForm /> */}
     <BrowserRouter>
       <HeaderR />
-    <Routes>
-      <Route path='/' element='Home'/>
-      <Route path='/Features' element='Features'/>
-      <Route path='/Pricing' element='Pricing'/>
-    </Routes>
+      <Routes>
+        <Route path='/' element='Home' />
+        <Route path='/Features' element='Features' />
+        <Route path='/Pricing' element='Pricing' />
+      </Routes>
     </BrowserRouter>
+    <CRUAD />
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
