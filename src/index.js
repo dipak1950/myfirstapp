@@ -21,8 +21,13 @@ import { Route, Routes } from 'react-router-dom';
 // import Todolist from './components/ToDoApp';
 // import LocalStorageForm from './components/LocalStorageForm';
 // import Header from './components/Router-Pages/Home/HeaderR';
+import Home from './components/Router-Pages/Home/Home';
+import Features from './components/Router-Pages/Features/Features';
+import Pricing from './components/Router-Pages/Pricing/Pricing';
 import HeaderR from './components/Router-Pages/Home/HeaderR';
-import CRUAD from './components/CRUD/CRUD';
+// import CRUAD from './components/CRUD/CRUD';
+import View from './components/Router-Pages/View/View';
+import Error from './components/Router-Pages/Error/Error';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -47,12 +52,14 @@ root.render(
     <BrowserRouter>
       <HeaderR />
       <Routes>
-        <Route path='/' element='Home' />
-        <Route path='/Features' element='Features' />
-        <Route path='/Pricing' element='Pricing' />
+        <Route path='/' element={<Home />} />
+        <Route path='/Features' element={<Features />} />
+        <Route path='/Pricing' element={<Pricing />} />
+        <Route path='/view' element={<View />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
-    <CRUAD />
+    {/* <CRUAD /> */}
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />

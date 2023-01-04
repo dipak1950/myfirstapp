@@ -53,7 +53,7 @@ function App() {
                     return (
                         <div className='card-item'>
                             <h4>
-                               Name : {v.name}
+                                Name : {v.name}
                             </h4>
                             <br></br>
                             <h4>
