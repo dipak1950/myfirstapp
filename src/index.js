@@ -56,7 +56,7 @@ root.render(
         <Route path='/Features' element={<Features />} />
         <Route path='/Pricing' element={<Pricing />} />
         <Route path='/view' element={<View />} />
-        <Route path='*' element={<Error />} />
+        {/* <Route path='*' element={<Error />} /> */}
       </Routes>
     </BrowserRouter>
     {/* <CRUAD /> */}
