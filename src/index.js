@@ -21,13 +21,16 @@ import { Route, Routes } from 'react-router-dom';
 // import Todolist from './components/ToDoApp';
 // import LocalStorageForm from './components/LocalStorageForm';
 // import Header from './components/Router-Pages/Home/HeaderR';
+
 import Home from './components/Router-Pages/Home/Home';
 import Features from './components/Router-Pages/Features/Features';
 import Pricing from './components/Router-Pages/Pricing/Pricing';
 import HeaderR from './components/Router-Pages/Home/HeaderR';
 // import CRUAD from './components/CRUD/CRUD';
 import View from './components/Router-Pages/View/View';
-import Error from './components/Router-Pages/Error/Error';
+// import Error from './components/Router-Pages/Error/Error';
+import Addemployee from './components/Router-Pages/Add-Employee/Addemployee';
+import Empview from './components/Router-Pages/Add-Employee/Empview';
 // import App from '../src/components/App';
 // import Gallery from './components/Gallery';
 // import Title from './components/Title';
@@ -56,10 +59,13 @@ root.render(
         <Route path='/Features' element={<Features />} />
         <Route path='/Pricing' element={<Pricing />} />
         <Route path='/view' element={<View />} />
+        <Route path='/Addemployee' element={<Addemployee />} />
+        <Route path='/empview' element={<Empview />} />
         {/* <Route path='*' element={<Error />} /> */}
       </Routes>
     </BrowserRouter>
     {/* <CRUAD /> */}
+
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
@@ -75,7 +81,6 @@ root.render(
   //   <Gallery/>
   //    <App />
   // </>
-
 
 );
 
