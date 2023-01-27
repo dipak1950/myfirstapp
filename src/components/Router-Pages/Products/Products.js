@@ -36,6 +36,25 @@ function Products() {
         setAllProduct(filterTitle);
     }
 
+    const sortData = (key, type) => {
+        // console.log(key, 'key');
+        const sortedData = [...allproduct].sort((proA, proB) => {
+            if (type === "low") {
+                return proA[key] - proB[key];
+            }
+            else if (type === "high") {
+                return proB[key] - proA[key];
+            }
+            else if (type === "asc") {
+                return proA[key].localeCompare(proB[key])
+            }
+            else if (type === "dsc") {
+                return proB[key].localeCompare(proA[key])
+            }
+        });
+        setAllProduct(sortedData)
+    }
+
     return (
         <>
             <Container>
@@ -45,7 +64,7 @@ function Products() {
                         {
                             categories.map((category, index) => {
                                 return (
-                                    <Button variant='primary' onClick={(() => filterList(category))} style={{ textTransform: 'capitalize', margin: "10px" }} key={index} id={index}>
+                                    <Button variant='primary' onClick={(() => filterList(category))} style={{ textTransform: 'capitalize', margin: "7px" }} key={index} id={index}>
                                         {
                                             category
                                         }
@@ -58,6 +77,20 @@ function Products() {
                         <Form.Control placeholder="Search" name='search' value={searchpro.search} onChange={(e) => { HandleChange(e) }} />
                     </div>
                 </Row>
+                <div className='col-12'>
+                    <Button onClick={() => { sortData("price", "low") }} style={{ margin: "12px" }}>
+                        Low Price
+                    </Button>
+                    <Button onClick={() => { sortData("price", "high") }} style={{ margin: "12px" }}>
+                        High Price
+                    </Button>
+                    <Button onClick={() => { sortData("title", "asc") }} style={{ margin: "12px" }}>
+                        A-Z
+                    </Button>
+                    <Button onClick={() => { sortData("title", "dsc") }} style={{ margin: "12px" }}>
+                        Z-A
+                    </Button>
+                </div>
             </Container>
             <Container>
                 <Row style={{ justifyContent: "center", marginTop: "30px" }}>
@@ -74,6 +107,11 @@ function Products() {
                                                 p.description
                                             }
                                         </Card.Text>
+                                        <Card.Text>
+                                            {
+                                                p.price
+                                            }
+                                        </Card.Text>
                                     </Card.Body>
                                 </Card>
                             )
@@ -84,5 +122,4 @@ function Products() {
         </>
     )
 }
-
 export default Products;
