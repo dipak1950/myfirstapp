@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Container, Table, Row, Button, Form, InputGroup } from 'react-bootstrap'
 import gatdata from './Getdata';
+import { DataGrid } from '@mui/x-data-grid';
 
 function Empview() {
 
@@ -83,6 +84,44 @@ function Empview() {
     }, [isSave])
 
 
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 90 },
+        {
+            field: 'name',
+            headerName: 'Name',
+            width: 150,
+            editable: true,
+        },
+        {
+            field: 'email',
+            headerName: 'Email',
+            width: 120,
+            editable: true,
+        },
+        {
+            field: 'mobile',
+            headerName: 'Mobile',
+            type: 'number',
+            width: 80,
+            editable: true,
+        },
+        {
+            field: 'address',
+            headerName: 'Address',
+            width: 130,
+            editable: true,
+        },
+        {
+            field: 'gender',
+            headerName: 'Gender',
+            type: 'number',
+            width: 120,
+            editable: true,
+        }
+    ];
+
+
+
     return (
         <>
             <Container>
@@ -94,7 +133,7 @@ function Empview() {
                         <Button variant='primary' onClick={() => { addemployee() }}>Add Employee</Button>
                     </div>
 
-                    <Table striped bordered hover>
+                    {/* <Table striped bordered hover>
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -197,7 +236,14 @@ function Empview() {
                                 })
                             }
                         </tbody>
-                    </Table>
+                    </Table> */}
+                    <div style={{ height: "500px" }}>
+                        <DataGrid
+                            rows={store}
+                            columns={columns}
+                            pageSize={5}
+                        />
+                    </div>
                 </Row>
             </Container>
         </>

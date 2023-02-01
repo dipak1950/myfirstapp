@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router';
+import { date } from 'yup';
 import gatdata from './Getdata';
 
 function Addemployee() {
@@ -23,7 +24,7 @@ function Addemployee() {
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        setInitial({ ...initial, [name]: value });
+        setInitial({ ...initial, [name]: value, id: new Date().toLocaleTimeString() });
     }
 
     const HandleSubmit = (e) => {
