@@ -71,7 +71,6 @@ root.render(
       </Routes>
     </BrowserRouter>
     {/* <CRUAD /> */}
-
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
