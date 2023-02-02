@@ -1,14 +1,22 @@
-import React from 'react'
-import { Menus } from './App'
+import React, { useContext } from 'react'
+import { Buttons, Menus } from './App'
 
 function ComMenu() {
+    const Name = useContext(Menus);
+    const Btn = useContext(Buttons);
+    // console.log(m)
     return (
         <>
             <div>ComMenu</div>
-            <Menus.Consumer>
+            <h1>
+                {
+                    Name + Btn
+
+                }
+            </h1>
+            {/* <Menus.Consumer>
                 {
                     (data) => {
-                        // console.log(data);
                         return (
                             <h1>
                                 {
@@ -18,7 +26,7 @@ function ComMenu() {
                         )
                     }
                 }
-            </Menus.Consumer>
+            </Menus.Consumer> */}
         </>
     )
 }

@@ -3,14 +3,18 @@ import './App.css';
 import ComHeader from './ComHeader';
 
 const Menus = createContext()
+const Buttons = createContext()
 
 function App() {
 
     return (
         <Menus.Provider value={"Home"}>
-            <ComHeader />
+            <Buttons.Provider value={"About"}>
+                <ComHeader />
+            </Buttons.Provider>
         </Menus.Provider>
     )
+    // Provider in value = Any Array and Object and Img Any mokli shakay Data and State
     // let data =
     //     [
     //         {
@@ -93,5 +97,5 @@ function App() {
 
 }
 
-export { Menus }
+export { Menus, Buttons }
 export default App;
