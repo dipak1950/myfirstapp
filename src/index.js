@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
-import { BrowserRouter } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import App from './components/App';
+// import { BrowserRouter } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 // import Header from './components/Header';
 // import Travel from './components/Travel'
 // import Counter from './components/Counter';
@@ -22,16 +23,16 @@ import { Route, Routes } from 'react-router-dom';
 // import LocalStorageForm from './components/LocalStorageForm';
 // import Header from './components/Router-Pages/Home/HeaderR';
 
-import Home from './components/Router-Pages/Home/Home';
-import Features from './components/Router-Pages/Features/Features';
-import Pricing from './components/Router-Pages/Pricing/Pricing';
-import HeaderR from './components/Router-Pages/Home/HeaderR';
-import Products from './components/Router-Pages/Products/Products';
+// import Home from './components/Router-Pages/Home/Home';
+// import Features from './components/Router-Pages/Features/Features';
+// import Pricing from './components/Router-Pages/Pricing/Pricing';
+// import HeaderR from './components/Router-Pages/Home/HeaderR';
+// import Products from './components/Router-Pages/Products/Products';
 // import CRUAD from './components/CRUD/CRUD';
-import View from './components/Router-Pages/View/View';
+// import View from './components/Router-Pages/View/View';
 // import Error from './components/Router-Pages/Error/Error';
-import Addemployee from './components/Router-Pages/Add-Employee/Addemployee';
-import Empview from './components/Router-Pages/Add-Employee/Empview';
+// import Addemployee from './components/Router-Pages/Add-Employee/Addemployee';
+// import Empview from './components/Router-Pages/Add-Employee/Empview';
 // import CardView from './components/Card-Details/Cardview';
 // import Viewcard from './components/Card-Details/Viewcard';
 // import App from '../src/components/App';
@@ -55,7 +56,7 @@ root.render(
     {/* <RegisterForm /> */}
     {/* <Todolist /> */}
     {/* <LocalStorageForm /> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <HeaderR />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -65,12 +66,14 @@ root.render(
         <Route path='/Addemployee' element={<Addemployee />} />
         <Route path='/empview' element={<Empview />} />
         <Route path='/category' element={<Products />} />
-        {/* <Route path='/' element={<CardView />} />
-        <Route path='/ViewCard' element={<Viewcard />} /> */}
-        {/* <Route path='*' element={<Error />} /> */}
+        <Route path='/' element={<CardView />} />
+        <Route path='/ViewCard' element={<Viewcard />} />
+        <Route path='*' element={<Error />} />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
     {/* <CRUAD /> */}
+    {/* <App /> */}
+    <App/>
   </>
 
   // <Travel logo ="images/logo-travel.png" list = {arr} />
@@ -84,7 +87,7 @@ root.render(
   // <>
   //   <Title/>
   //   <Gallery/>
-  //    <App />
+    //  <App />
   // </>
 
 );
