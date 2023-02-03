@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import './App.css';
 import ComHeader from './ComHeader';
+import ReducerCom from './ReducerCom';
 
 const Menus = createContext()
 const Buttons = createContext()
@@ -8,11 +9,14 @@ const Buttons = createContext()
 function App() {
 
     return (
-        <Menus.Provider value={"Home"}>
-            <Buttons.Provider value={"About"}>
-                <ComHeader />
-            </Buttons.Provider>
-        </Menus.Provider>
+        <>
+            <Menus.Provider value={"Home"}>
+                <Buttons.Provider value={"About"}>
+                    <ComHeader />
+                </Buttons.Provider>
+            </Menus.Provider>
+            <ReducerCom />
+        </>
     )
     // Provider in value = Any Array and Object and Img Any mokli shakay Data and State
     // let data =
