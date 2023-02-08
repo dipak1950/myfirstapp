@@ -11,8 +11,7 @@ function Memoazation() {
     // }
     // const Multipication = multi;
 
-
-    const Multipication = useMemo(Multipication=> {
+    const Multipication = useMemo(function multi() {
         console.log("call me");
         return Add * 10;
     }, [Add])
@@ -27,14 +26,14 @@ function Memoazation() {
             <button onClick={() => setAdd(Add + 1)}>
                 +
             </button>
-            <button onClick={() => setMinus(Minus - 1)}>
-                -
-            </button>
             <h1>
                 {
                     Minus
                 }
             </h1>
+            <button onClick={() => setMinus(Minus - 1)}>
+                -
+            </button>
             <h1>
                 {
                     Multipication
@@ -44,4 +43,4 @@ function Memoazation() {
     )
 }
 
-export default Memoazation
+export default Memoazation;
