@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import './App.css';
 import ComHeader from './ComHeader';
+import Memoazation from './Memoazation';
 import ReducerCom from './ReducerCom';
 
 const Menus = createContext()
@@ -10,12 +11,13 @@ function App() {
 
     return (
         <>
-            <Menus.Provider value={"Home"}>
+            {/* <Menus.Provider value={"Home"}>
                 <Buttons.Provider value={"About"}>
                     <ComHeader />
                 </Buttons.Provider>
             </Menus.Provider>
-            <ReducerCom />
+            <ReducerCom /> */}
+            <Memoazation />
         </>
     )
     // Provider in value = Any Array and Object and Img Any mokli shakay Data and State
