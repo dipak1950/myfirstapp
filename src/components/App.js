@@ -3,6 +3,7 @@ import './App.css';
 import ComHeader from './ComHeader';
 import Memoazation from './Memoazation';
 import ReducerCom from './ReducerCom';
+import Callback from './UseCallback/Callback';
 
 const Menus = createContext()
 const Buttons = createContext()
@@ -17,7 +18,8 @@ function App() {
                 </Buttons.Provider>
             </Menus.Provider>
             <ReducerCom /> */}
-            <Memoazation />
+            {/* <Memoazation /> */}
+            <Callback />
         </>
     )
     // Provider in value = Any Array and Object and Img Any mokli shakay Data and State
